@@ -1,0 +1,81 @@
+=================================================================
+       OPENCODE FIX - DESTRAVADOR & REPARADOR UNIFICADO v3.0
+=================================================================
+
+ARQUIVOS DA PASTA:
+- OpenCode-Fix.bat : Atalho unico e executavel principal (1 clique).
+- CHAVES.txt       : Bloco de notas simples para cadastrar novas chaves.
+- zen_keys.json    : Banco de dados com suas chaves cadastradas e organizadas.
+- zen_keys.example.json : Exemplo do formato do zen_keys.json (sem chaves reais).
+- fix_opencode.py  : Script com todas as funcoes de reparo, rotacao e testes.
+- README.md        : Manual completo, com tabelas e explicacoes.
+- LEIA-ME.txt      : Este manual explicativo.
+
+-----------------------------------------------------------------
+ATENCAO: CHAVES.txt e zen_keys.json NAO sao versionados no GitHub
+(elaborados estao no .gitignore). Suas chaves ficam so no seu PC.
+O script cria o zen_keys.json automaticamente na primeira chave cadastrada.
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+COMO CADASTRAR NOVAS CHAVES DE FORMA FACIL:
+-----------------------------------------------------------------
+1. Abra o arquivo CHAVES.txt (com Bloco de Notas ou qualquer editor).
+2. Adicione sua chave em uma linha no formato:
+   seunome@exemplo.com = sk-suachaveaqui
+3. Salve o arquivo (Ctrl+S).
+4. No OpenCode Fix, va na Opcao [2] Gerenciador de Chaves e escolha
+   a opcao [6] Importar Chaves do CHAVES.txt.
+   Pronto! A chave estara cadastrada e pronta para uso e rotacao.
+
+-----------------------------------------------------------------
+PRINCIPAIS FUNCIONALIDADES DO MENU:
+-----------------------------------------------------------------
+
+[1] DESTRAVAMENTO COMPLETO (1 Clique / Padrao - Pressione ENTER):
+    - Fecha processos travados com seguranca.
+    - Zera cronometros de retentativa (tentando novamente em Xs).
+    - Remove erros do banco SQLite e mensagens de bloqueio.
+    - Arquiva imagens excedentes preservando as 10 mais recentes.
+    - Ativa triggers permanentes de autoprotecao no SQLite.
+    - Aplica o filtro estrito exibindo apenas os 7 modelos FREE do Zen.
+    - Reabre o OpenCode destravado e fecha o console em 5s.
+
+[2] GERENCIADOR & TROCADOR DE CHAVES:
+    - [1] Testar Todas as Chaves (Status em Tempo Real).
+    - [2] Escolher e Ativar uma Chave especifica no OpenCode.
+    - [3] Rotacao Automatica (Valida Cloudflare + Encontra e Ativa Chave Livre).
+    - [4] Cadastrar Nova Chave direto pelo terminal.
+    - [5] Remover uma Chave da lista.
+    - [6] Importar Chaves do CHAVES.txt.
+    - [7] Exportar Chaves para CHAVES.txt.
+    - [8] Verificar Cloudflare WARP (VPN).
+
+[3] ROTACAO AUTOMATICA DE CHAVES (1 Clique):
+    - Valida se o Cloudflare WARP esta ativo (conecta se necessario).
+    - Testa todas as chaves e ativa automaticamente a que tiver cota livre.
+    - Reinicia e destrava o OpenCode ja com a chave funcionando.
+
+[4] FILTRAR APENAS MODELOS ZEN FREE:
+    - Oculta todos os modelos pagos (Big Pickle, Claude, GPT, Gemini).
+    - Deixa visiveis exclusivamente os 7 modelos 100% gratuitos do Zen.
+
+[5] REPARAR APENAS BANCO SQLITE:
+    - Remove mensagens com erro e instala triggers sem reiniciar o app.
+
+[6] MUDAR PARA BACKUP XROUTER (Gemini 3.7 / Sem Limites):
+    - Se suas cotas do Zen esgotarem, ativa os modelos locais do XRouter.
+
+[7] VERIFICAR CLOUDFLARE WARP:
+    - Mostra se a VPN esta conectada, se o servico esta ativo e seu IP publico.
+
+[8] TESTAR CONEXOES:
+    - Testa Cloudflare WARP, XRouter local e API Oficial do Zen.
+
+-----------------------------------------------------------------
+POR QUE USAR O CLOUDFLARE WARP:
+O OpenCode Zen aplica limite de requisicoes por IP. Se seu IP real estourar
+a cota, TODAS as chaves dao erro 429 Rate Limit ao mesmo tempo.
+Com o Cloudflare WARP conectado, seu IP passa a ser da Cloudflare (IPv6),
+evitando o bloqueio por IP e fazendo as chaves funcionarem normalmente!
+=================================================================

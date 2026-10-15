@@ -1,0 +1,29 @@
+# Dados pessoais / segredos - NUNCA versionar
+zen_keys.json
+CHAVES.txt
+*.env
+.env
+config.local.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# Ferramentas / editores
+.vscode/
+.idea/
+*.swp
+*.tmp
+*.bak
+*.log
+
+# Sistema operacional
+Thumbs.db
+desktop.ini
+.DS_Store
